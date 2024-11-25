@@ -33,7 +33,7 @@ export default function HomepageHero() {
   const featureList = t('featureList')
   const faqs = t('faqs')
 
-  const { resolvedTheme } = useTheme()
+  // const { resolvedTheme } = useTheme()
 
   const processedFeatureList = useMemo(() => {
     const icons = [
@@ -59,20 +59,6 @@ export default function HomepageHero() {
     <>
       <PanelParticles />
       <SetupHero />
-      {/* <div className="relative top-[-18px] mb-[-10px] flex justify-center py-[0px] z-[2]">
-        <a
-          href="https://nextjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-[150px] h-[40px] flex flex-col items-center gap-[20px]"
-        >
-          <img
-            className="dark:invert"
-            src="/next.svg"
-            style={{ width: '100%', height: 'auto' }}
-          />
-        </a>
-      </div> */}
       <div className="relative z-[1] pb-10 md:pb-[100px]">
         <Section
           title="Tech Stack"

@@ -8,8 +8,11 @@ export default {
       layout: 'raw',
     },
   },
-  introduction: '这是介绍',
-  examples: {
+  introduction: {
+    title: '介绍',
+    display: 'hidden',
+  },
+  posts: {
     title: '示例',
     type: 'page',
   },

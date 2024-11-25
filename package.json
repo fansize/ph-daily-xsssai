@@ -3,20 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "description": "Next.js Nextra docs starter",
-  "author": "Wisdom <pdsu.wwz@foxmail.com>",
-  "license": "MIT",
-  "homepage": "https://github.com/pdsuwwz/nextjs-nextra-starter#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pdsuwwz/nextjs-nextra-starter.git"
-  },
-  "bugs": {
-    "url": "https://github.com/pdsuwwz/nextjs-nextra-starter/issues"
-  },
   "scripts": {
-    "dev": "next dev -p 8000 -H 0.0.0.0",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 7000",
+    "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },
