@@ -42,6 +42,7 @@ export default antfu({
     'react-hooks/rules-of-hooks': OFF,
 
     'unused-imports/no-unused-vars': WARN,
+    'unused-imports/no-unused-imports': OFF,
     curly: [ERROR, 'multi-line', 'consistent'],
 
     'no-multiple-empty-lines': [
