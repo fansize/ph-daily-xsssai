@@ -159,7 +159,7 @@ def fetch_product_hunt_data():
     has_next_page = True
     cursor = ""
 
-    while has_next_page and len(all_posts) < 30:
+    while has_next_page and len(all_posts) < 10:
         query = base_query % (date_str, date_str, cursor)
         response = requests.post(url, headers=headers, json={"query": query})
 
@@ -173,8 +173,8 @@ def fetch_product_hunt_data():
         has_next_page = data['pageInfo']['hasNextPage']
         cursor = data['pageInfo']['endCursor']
 
-    # 只保留前30个产品
-    return [Product(**post) for post in sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:30]]
+    # 只保留前10个产品
+    return [Product(**post) for post in sorted(all_posts, key=lambda x: x['votesCount'], reverse=True)[:10]]
 
 def generate_markdown(products, date_str):
     """生成Markdown内容并保存到 /pages/posts 目录"""
