@@ -1,0 +1,7 @@
+User - agent: *
+    Allow: /
+    Allow: /en/
+    Allow: /zh/
+
+Sitemap: https://elegantjewelrys.shop/sitemap.xml
+Host: https://elegantjewelrys.shop

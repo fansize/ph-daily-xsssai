@@ -6,7 +6,7 @@ import { type DocsThemeConfig, useConfig } from 'nextra-theme-docs'
 import LocaleToggle from './widgets/locale-toggle'
 import ThemeToggle from './widgets/theme-toggle'
 
-const repo = 'https://github.com/pdsuwwz/nextjs-nextra-starter'
+const repo = 'https://elegantjewelrys.shop'
 
 const docsThemeConfig = {
   docsRepositoryBase: `${repo}/tree/main/docs`,
@@ -49,7 +49,7 @@ const docsThemeConfig = {
     return (
       <>
         <Link href={`/${currentLocale}`}>
-          {t('systemTitle') }
+          {t('systemTitle')}
         </Link>
       </>
     )
@@ -87,14 +87,14 @@ const docsThemeConfig = {
 
       return (
         <div>
-          { t('banner.title') }
+          {t('banner.title')}
           {' '}
           <a
             className="max-sm:hidden text-warning hover:underline"
             target="_blank"
             href={repo}
           >
-            { t('banner.more') }
+            {t('banner.more')}
           </a>
         </div>
       )

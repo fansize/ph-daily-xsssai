@@ -66,5 +66,6 @@ export default antfu({
 
     'ts/no-use-before-define': OFF,
     'ts/ban-ts-comment': OFF,
+    'style/indent': OFF,
   },
 })
