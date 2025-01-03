@@ -6,13 +6,13 @@ import { type DocsThemeConfig, useConfig } from 'nextra-theme-docs'
 import LocaleToggle from './widgets/locale-toggle'
 import ThemeToggle from './widgets/theme-toggle'
 
-const repo = 'https://elegantjewelrys.shop'
+const repo = 'https://xsssai.com'
 
 const docsThemeConfig = {
   docsRepositoryBase: `${repo}/tree/main/docs`,
   head: () => {
-    const title = 'My Nextra Starter'
-    const description = 'A Starter template with Next.js, Nextra'
+    const title = 'XSSSAI'
+    const description = 'XSSSAI - Product Hunt Daily'
     const { asPath } = useRouter()
     const { title: pageTitle } = useConfig()
     return (

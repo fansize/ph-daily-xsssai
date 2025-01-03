@@ -57,11 +57,11 @@ export default function HomepageHero() {
 
   return (
     <>
-      <PanelParticles />
+      {/* <PanelParticles /> */}
       <SetupHero />
       <div className="relative z-[1] pb-10 md:pb-[100px]">
         <Section
-          title="Tech Stack"
+          // title="Tech Stack"
           titleProps={{
             disabledAnimation: false,
           }}
@@ -90,7 +90,7 @@ export default function HomepageHero() {
           </div>
         </Section>
         <Section
-          title="Features"
+          // title="Features"
           description={t('featuresDesc')}
         >
           <div className="flex justify-center w-full max-w-7xl">

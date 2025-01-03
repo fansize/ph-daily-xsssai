@@ -6,19 +6,47 @@ import { LinkPreview } from '@/components/ui/link-preview'
 import { useLocale } from '@/hooks'
 import Link from 'next/link'
 
-interface Props {
+const STRINGS = {
+  GITHUB_REPO: 'https://github.com/pdsuwwz/nextjs-nextra-starter',
+  LINKS: {
+    NEXTJS: 'https://nextjs.org',
+    TAILWIND: 'https://tailwindcss.com',
+    SHADCN: 'https://ui.shadcn.com',
+    ACETERNITY: 'https://ui.aceternity.com',
+    GITHUB: 'https://github.com/fansize/ph-daily-xsssai',
+  },
+  FLIP_WORDS: [
+    '精选',
+    '新颖',
+    '高效',
+    '实用',
+    '创新',
+    '优质',
+    '热门',
+    '趋势',
+    '必备',
+  ],
+  LABELS: {
+    NEXTRA: 'Product',
+    STARTER: 'Hunter',
+    TEMPLATE: 'Daily',
+    TEMPLATE_MADE: '发现',
+    WITH: '基于',
+    GET_STARTED: '开始探索',
+    GITHUB: '查看源码',
+  },
 }
-export function SetupHero(props: Props) {
+
+export function SetupHero() {
   const { t, currentLocale } = useLocale()
 
   return (
     <div className={styles.container}>
-      {/* <div className={styles.tilesBox}></div> */}
       <div className={styles.content}>
         <div className={styles.badgeContainer}>
           <a
             className={styles.badge}
-            href="https://github.com/pdsuwwz/nextjs-nextra-starter"
+            href={STRINGS.GITHUB_REPO}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -30,59 +58,29 @@ export function SetupHero(props: Props) {
             <span className="icon-[emojione-v1--lightning-mood]"></span>
           </MotionWrapperFlash>
           {' '}
-          Nextra
+          {STRINGS.LABELS.NEXTRA}
           {' '}
           <br className="sm:hidden"></br>
           {' '}
-          Starter
+          {STRINGS.LABELS.STARTER}
           <br className="sm:hidden"></br>
           {' '}
-          Template
+          {STRINGS.LABELS.TEMPLATE}
         </h1>
         <div className={styles.subtitle}>
-          Template made
+          {STRINGS.LABELS.TEMPLATE_MADE}
           {' '}
-          <FlipWords
-            words={[
-              'Fast',
-              'Simple',
-              'Modern',
-              'Flexible',
-              'Easy',
-              'Functional',
-              'Efficient',
-              'Scalable',
-              'Reusable',
-            ]}
-          />
+          <FlipWords words={STRINGS.FLIP_WORDS} />
           <br />
-          With
+          {STRINGS.LABELS.WITH}
           {' '}
-          <LinkPreview
-            url="https://nextjs.org"
-          >
-            Next.js
-          </LinkPreview>
+          <LinkPreview url={STRINGS.LINKS.NEXTJS}>Next.js</LinkPreview>
           ,
           {' '}
-          <LinkPreview
-            url="https://tailwindcss.com"
-          >
-            Tailwind CSS
-          </LinkPreview>
+          <LinkPreview url={STRINGS.LINKS.TAILWIND}>Tailwind CSS</LinkPreview>
           , and
           {' '}
-          <LinkPreview
-            url="https://ui.shadcn.com"
-          >
-            Shadcn UI
-          </LinkPreview>
-          {', '}
-          <LinkPreview
-            url="https://ui.aceternity.com"
-          >
-            Aceternity UI
-          </LinkPreview>
+          <LinkPreview url={STRINGS.LINKS.SHADCN}>Shadcn UI</LinkPreview>
         </div>
         <div className="flex justify-center pt-10">
           <div className="max-w-[500px] flex flex-wrap gap-[20px] max-sm:justify-center">
@@ -91,10 +89,8 @@ export function SetupHero(props: Props) {
               size="lg"
               className="font-bold group max-sm:w-[100%]"
             >
-              <Link
-                href={`/${currentLocale}/introduction`}
-              >
-                Get Started
+              <Link href={`/${currentLocale}/posts/2025-01-01`}>
+                {STRINGS.LABELS.GET_STARTED}
                 <span className="w-[20px] translate-x-[6px] transition-all group-hover:translate-x-[10px] icon-[mingcute--arrow-right-fill]"></span>
               </Link>
             </Button>
@@ -104,11 +100,8 @@ export function SetupHero(props: Props) {
               variant="secondary"
               className="font-bold group max-sm:w-[100%]"
             >
-              <Link
-                href="https://github.com/pdsuwwz/nextjs-nextra-starter"
-                target="_blank"
-              >
-                Github
+              <Link href={STRINGS.LINKS.GITHUB} target="_blank">
+                {STRINGS.LABELS.GITHUB}
                 <span className="ml-[6px] icon-[mingcute--github-line]"></span>
               </Link>
             </Button>
